@@ -21,6 +21,7 @@ class WP_Sortable_Stickies {
 		add_action( 'admin_head', array( $this, 'admin_css' ) );
 		add_action( 'admin_head', array( $this, 'admin_js' ) );
 		add_action( 'wp_ajax_dr-sort-stickies', array( $this, 'dr_sort_stickies' ) );
+		#add_action( 'pre_get_posts', array( $this, 'modify_query' ) );
 	}
 
 	public function admin_enq_js() {
@@ -97,6 +98,11 @@ class WP_Sortable_Stickies {
 		}
 		</style>
 		<?php
+	}
+
+	public function modify_query( $query) {
+		$query->set( 'orderby', 'post__in' );
+		$query->set( 'post__in', get_option('sticky_posts') );
 	}
 
 	public function dr_sort_stickies() {
