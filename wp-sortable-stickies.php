@@ -132,7 +132,6 @@ class WP_Sortable_Stickies {
 				echo '<li data-postid="' . get_the_ID() . '">' . get_the_title() . ' (Pub: ' . get_the_date() . ')</li>';
 			endwhile;
 			echo '</ul>';
-			echo '<a id="dr-sticky-order-reset">Reset Order</a>';
 			echo '</div>';
 		endif;
 
