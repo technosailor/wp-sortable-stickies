@@ -19,6 +19,10 @@ Adds a new admin settings section to the Settings > Reading table. Drag and drop
 
 Just drag and drop the posts in the order you want them considered.
 
+# I changed the order, but the order isn't changed on my site. What's wrong?
+
+This is a case of the loop not using `orderby` => `post__in`. You vavet o manually modify your query to do this. Future versions will handle that for you.
+
 = Do you like beer? Can I buy you one? =
 
 Derp. I'm a beer snob. Of course you can.
