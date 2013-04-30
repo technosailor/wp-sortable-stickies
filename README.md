@@ -1,10 +1,12 @@
 # Plugin Name
 Contributors: technosailor
-Tags: stickies, sticky, posts
+
 Requires at least: 3.5.1
+
 Tested up to: 3.6-beta1
-Stable tag: trunk
+
 License: GPLv2
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Adds drag and drop Sticky Post sorting to the Settings > Reading Page. WordPress likes to store Stickies in order they were stickied. I don't like that.
