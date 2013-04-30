@@ -25,7 +25,7 @@ Just drag and drop the posts in the order you want them considered.
 
 This is a case of the loop not using `orderby` => `post__in`. You have to manually modify your query to do this. Future versions will handle that for you.
 
-	$sticky_loop = new WP_Query( 'post__in' => get_option('sticky_posts'), 'orderby' ==> 'post__in' );
+	$sticky_loop = new WP_Query( array( 'post__in' => get_option('sticky_posts'), 'orderby' ==> 'post__in' ) );
 
 # Do you like beer? Can I buy you one?
 
